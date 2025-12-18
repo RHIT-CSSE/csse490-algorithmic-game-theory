@@ -1,3 +1,4 @@
+from pprint import pprint
 from marginal_value import calculate_marginal_value
 from sample_valuations import SampleValuations
 
@@ -22,4 +23,7 @@ if __name__ == "__main__":
     ]:
         print(f"Running LocalBid with {valuation_func.__name__}:")
         optimized_bids = local_bid(goods, valuation_func, price_vector, num_iterations=100)
-        print("Final bid vector:", optimized_bids, "\n")
+        print("Final bid vector:")
+        pprint(optimized_bids)
+        print()
+
